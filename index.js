@@ -1,8 +1,5 @@
 // code your solution here
 function superbowlWin(record) {
- for (let W of record) {
-    while(W.result === "W") {
-        return W.year;
-    }
- }
-};
+    let result = record.find(win => win.result === "W")
+    return (result ? result.year : result=undefined)
+}
